@@ -1,0 +1,172 @@
+/* ===== SIMPLIESTUI ===== */
+
+/* ===== TABLE OF CONTENT ===== 
+
+- Navbar
+- Buttons
+- Cards
+- Text
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* GLOBAL COLORS */
+    --color-light: #FFFFFF;
+    --color-dark: #000000;
+    --color-transparent: #00000000;
+
+    /* NORMAL COLORS */
+    --color-primary: #33A5FF;
+    --color-secondary: #666666;
+    --color-positive: #28a524;
+    --color-negative: #E23F3F;
+
+    /* SELECTED COLORS */
+    --color-primary-selected: #2c8cd4;
+    --color-secondary-selected: #444444;
+    --color-positive-selected: #238a1f;
+    --color-negative-selected: #b92f2f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+nav.navbar {
+    padding-right: 128px;
+    padding-left: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.navbar > * {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav.navbar > * > * {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .1s;
+}
+
+button.primary {
+    outline: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+button.secondary {
+    outline: 2px solid var(--color-secondary);
+    background-color: var(--color-transparent);
+    color: var(--color-secondary);
+}
+
+button.positive {
+    outline: 2px solid var(--color-positive);
+    background-color: var(--color-positive);
+    color: var(--color-light);
+}
+
+button.negative {
+    outline: 2px solid var(--color-negative);
+    background-color: var(--color-negative);
+    color: var(--color-light);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button.primary:hover {
+    outline: 2px solid var(--color-primary-selected);
+    background-color: var(--color-primary-selected);
+}
+
+button.secondary:hover {
+    outline: 2px solid var(--color-secondary-selected);
+    color: var(--color-secondary-selected);
+}
+
+button.positive:hover {
+    outline: 2px solid var(--color-positive-selected);
+    background-color: var(--color-positive-selected);
+}
+
+button.negative:hover {
+    outline: 2px solid var(--color-negative-selected);
+    background-color: var(--color-negative-selected);
+}
+
+/* ===== CARDS ===== */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-transparent);
+    outline: 2px solid var(--color-secondary);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+/* ===== TEXT  ===== */
+.text-size-6 {
+    font-size: 16px;
+}
+
+.text-size-5 {
+    font-size: 20px;
+}
+
+.text-size-4 {
+    font-size: 24px;
+}
+
+.text-size-3 {
+    font-size: 32px;
+}
+
+.text-size-2 {
+    font-size: 48px;
+}
+
+.text-size-1 {
+    font-size: 128px;
+}
+
+.text-color-white {
+    color: #FFFFFF;
+}
+
+.text-color-black {
+    color: #000000;
+}
+
+/* ===== OTHER ===== */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
