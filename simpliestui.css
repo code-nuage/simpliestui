@@ -3,6 +3,7 @@
 /* ===== TABLE OF CONTENT ===== 
 
 - Navbar
+- Search
 - Buttons
 - Cards
 - Text
@@ -55,6 +56,27 @@ nav.navbar > * {
 nav.navbar > * > * {
     margin-left: 16px;
     margin-right: 16px;
+}
+
+/* ===== SEARCH =====*/
+.searchbar::before {
+    content: url('https://api.iconify.design/mdi:magnify.svg');
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.searchbar > input {
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid var(--color-secondary);
+    outline: none;
+    transition: .1s;
+}
+
+.searchbar > input:focus {
+    border: 2px solid var(--color-primary);
 }
 
 /* ===== BUTTONS ===== */
@@ -130,28 +152,32 @@ button.negative:hover {
 }
 
 /* ===== TEXT  ===== */
-.text-size-6 {
-    font-size: 16px;
+p {
+    font-size: 12rem;
 }
 
-.text-size-5 {
-    font-size: 20px;
+h6 {
+    font-size: 16rem;
 }
 
-.text-size-4 {
-    font-size: 24px;
+h5 {
+    font-size: 24rem;
 }
 
-.text-size-3 {
-    font-size: 32px;
+h4 {
+    font-size: 28rem;
 }
 
-.text-size-2 {
-    font-size: 48px;
+h3 {
+    font-size: 36rem;
 }
 
-.text-size-1 {
-    font-size: 128px;
+h2 {
+    font-size: 42rem;
+}
+
+h1 {
+    font-size: 56rem;
 }
 
 .text-color-white {
