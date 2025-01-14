@@ -2,6 +2,7 @@
 
 /* ===== TABLE OF CONTENT ===== 
 
+- Container
 - Navbar
 - Search
 - Buttons
@@ -17,6 +18,7 @@
     --color-light: #FFFFFF;
     --color-dark: #000000;
     --color-transparent: #00000000;
+
 
     /* NORMAL COLORS */
     --color-primary: #33A5FF;
@@ -37,8 +39,14 @@
     font-family: "Outfit", sans-serif;
 }
 
+/* ===== CONTAINER ===== */
+div.container {
+    max-width: 960px;
+}
+
 /* ===== NAVBAR ===== */
 nav.navbar {
+    width: 100%;
     padding-right: 128px;
     padding-left: 128px;
     display: flex;
@@ -153,31 +161,31 @@ button.negative:hover {
 
 /* ===== TEXT  ===== */
 p {
-    font-size: 12rem;
+    font-size: 12px;
 }
 
 h6 {
-    font-size: 16rem;
+    font-size: 16px;
 }
 
 h5 {
-    font-size: 24rem;
+    font-size: 20px;
 }
 
 h4 {
-    font-size: 28rem;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 36rem;
+    font-size: 32px;
 }
 
 h2 {
-    font-size: 42rem;
+    font-size: 48px;
 }
 
 h1 {
-    font-size: 56rem;
+    font-size: 128px;
 }
 
 .text-color-white {
