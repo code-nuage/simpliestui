@@ -3,11 +3,9 @@
 /* ===== TABLE OF CONTENT ===== 
 
 - Container
-- Navbar
-- Search
 - Buttons
-- Cards
 - Text
+- Grids
 
 */
 
@@ -15,192 +13,114 @@
 
 :root {
     /* GLOBAL COLORS */
-    --color-light: #FFFFFF;
-    --color-dark: #000000;
-    --color-transparent: #00000000;
-
+    --color-white: #FFFFFF;
+    --color-black: #000000;
 
     /* NORMAL COLORS */
     --color-primary: #33A5FF;
-    --color-secondary: #666666;
-    --color-positive: #28a524;
+    --color-secondary: #a8a8a8;
+    --color-positive: #3dbe38;
     --color-negative: #E23F3F;
 
     /* SELECTED COLORS */
-    --color-primary-selected: #2c8cd4;
-    --color-secondary-selected: #444444;
-    --color-positive-selected: #238a1f;
-    --color-negative-selected: #b92f2f;
+    --color-primary-selected: #2d92df;
+    --color-secondary-selected: #919191;
+    --color-positive-selected: #35a731;
+    --color-negative-selected: #cc3333;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Outfit", sans-serif;
 }
 
-/* ===== CONTAINER ===== */
-div.container {
+/* --+ CONTAINER +-- */
+.container {
     max-width: 960px;
+    margin: 0 auto;
 }
 
-/* ===== NAVBAR ===== */
-nav.navbar {
-    width: 100%;
-    padding-right: 128px;
-    padding-left: 128px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav.navbar > * {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-}
-
-nav.navbar > * > * {
-    margin-left: 16px;
-    margin-right: 16px;
-}
-
-/* ===== SEARCH =====*/
-.searchbar::before {
-    content: url('https://api.iconify.design/mdi:magnify.svg');
-    display: inline-block;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.searchbar > input {
-    border: none;
-    padding: 8px;
+/* --+ BUTTONS +-- */
+.btn {
+    padding: 4px 12px;
     border-radius: 4px;
-    border: 2px solid var(--color-secondary);
-    outline: none;
-    transition: .1s;
-}
-
-.searchbar > input:focus {
-    border: 2px solid var(--color-primary);
-}
-
-/* ===== BUTTONS ===== */
-button {
     border: none;
-    border-radius: 4px;
-    padding: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .1s;
-}
+    color: var(--color-white);
 
-button.primary {
-    outline: 2px solid var(--color-primary);
-    background-color: var(--color-primary);
-    color: var(--color-light);
-}
+    background-color: var(--color-primary); /* Stylise the "default" button with primary button style */
 
-button.secondary {
-    outline: 2px solid var(--color-secondary);
-    background-color: var(--color-transparent);
-    color: var(--color-secondary);
-}
-
-button.positive {
-    outline: 2px solid var(--color-positive);
-    background-color: var(--color-positive);
-    color: var(--color-light);
-}
-
-button.negative {
-    outline: 2px solid var(--color-negative);
-    background-color: var(--color-negative);
-    color: var(--color-light);
-}
-
-button:hover {
     cursor: pointer;
 }
 
-button.primary:hover {
-    outline: 2px solid var(--color-primary-selected);
-    background-color: var(--color-primary-selected);
-}
+.btn:hover { background-color: var(--color-primary-selected); }
 
-button.secondary:hover {
-    outline: 2px solid var(--color-secondary-selected);
-    color: var(--color-secondary-selected);
-}
+.btn-primary { background-color: var(--color-primary); }
+.btn-secondary { background-color: var(--color-secondary); }
+.btn-positive { background-color: var(--color-positive); }
+.btn-negative { background-color: var(--color-negative); }
 
-button.positive:hover {
-    outline: 2px solid var(--color-positive-selected);
-    background-color: var(--color-positive-selected);
-}
+.btn-primary:hover { background-color: var(--color-primary-selected); }
+.btn-secondary:hover { background-color: var(--color-secondary-selected); }
+.btn-positive:hover { background-color: var(--color-positive-selected); }
+.btn-negative:hover { background-color: var(--color-negative-selected); }
 
-button.negative:hover {
-    outline: 2px solid var(--color-negative-selected);
-    background-color: var(--color-negative-selected);
-}
+/* --+ TEXT +-- */
+a, p, button, h6, h5, h4, h3, h2, h1 {
+    color: var(--color-black);
 
-/* ===== CARDS ===== */
-.card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-transparent);
-    outline: 2px solid var(--color-secondary);
-    padding: 16px;
-    border-radius: 4px;
-}
-
-/* ===== TEXT  ===== */
-p {
-    font-size: 12px;
-}
-
-h6 {
     font-size: 16px;
-}
+    font-weight: 500;
 
-h5 {
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 48px;
-}
-
-h1 {
-    font-size: 128px;
-}
-
-.text-color-white {
-    color: #FFFFFF;
-}
-
-.text-color-black {
-    color: #000000;
-}
-
-/* ===== OTHER ===== */
-a {
     text-decoration: none;
+    margin: 0 4px;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+.text-size-12, .text-size-caption { font-size: 12px; }
+.text-size-14, .text-size-small { font-size: 14px; }
+.text-size-16, .text-size-body { font-size: 16px; }
+.text-size-20, .text-size-regular { font-size: 20px; }
+.text-size-24, .text-size-medium { font-size: 24px; }
+.text-size-28, .text-size-display-small { font-size: 28px; }
+.text-size-32, .text-size-display-medium { font-size: 32px; }
+.text-size-48, .text-size-display-large { font-size: 48px; }
+.text-size-64, .text-size-hero-small { font-size: 64px; }
+.text-size-96, .text-size-hero-medium { font-size: 96px; }
+.text-size-128, .text-size-hero-large { font-size: 128px; }
+
+/* --+ GRIDS +-- */
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+[class^="grid-col-"] {
+    padding: 8px;
+    flex: 1;
+}
+
+.grid-col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+.grid-col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+.grid-col-3 { flex: 0 0 25%; max-width: 25%; }
+.grid-col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+.grid-col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+.grid-col-6 { flex: 0 0 50%; max-width: 50%; }
+.grid-col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+.grid-col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+.grid-col-9 { flex: 0 0 75%; max-width: 75%; }
+.grid-col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+.grid-col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+.grid-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+@media (max-width: 768px) {
+    [class^="grid-col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
