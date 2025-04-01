@@ -42,6 +42,10 @@
     margin: 0 auto;
 }
 
+.full-width {
+    width: 100%;
+}
+
 /* --+ BUTTONS +-- */
 .btn {
     padding: 4px 12px;
@@ -54,17 +58,21 @@
     cursor: pointer;
 }
 
+.btn.left { border-radius: 4px 0 0 4px; margin: 0; margin-left: 4px; border-right: .5px solid var(--color-primary-selected);}
+.btn.center { border-radius: 0; margin: 0; border-inline: .5px solid var(--color-primary-selected);}
+.btn.right { border-radius: 0 4px 4px 0; margin: 0; margin-right: 4px; border-left: .5px solid var(--color-primary-selected);}
+
 .btn:hover { background-color: var(--color-primary-selected); }
 
-.btn-primary { background-color: var(--color-primary); }
-.btn-secondary { background-color: var(--color-secondary); }
-.btn-positive { background-color: var(--color-positive); }
-.btn-negative { background-color: var(--color-negative); }
+.btn.primary { background-color: var(--color-primary); }
+.btn.secondary { background-color: var(--color-secondary); }
+.btn.positive { background-color: var(--color-positive); }
+.btn.negative { background-color: var(--color-negative); }
 
-.btn-primary:hover { background-color: var(--color-primary-selected); }
-.btn-secondary:hover { background-color: var(--color-secondary-selected); }
-.btn-positive:hover { background-color: var(--color-positive-selected); }
-.btn-negative:hover { background-color: var(--color-negative-selected); }
+.btn.primary:hover { background-color: var(--color-primary-selected); }
+.btn.secondary:hover { background-color: var(--color-secondary-selected); }
+.btn.positive:hover { background-color: var(--color-positive-selected); }
+.btn.negative:hover { background-color: var(--color-negative-selected); }
 
 /* --+ TEXT +-- */
 a, p, button, h6, h5, h4, h3, h2, h1 {
