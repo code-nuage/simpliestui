@@ -3,6 +3,7 @@
 /* ===== TABLE OF CONTENT ===== 
 
 - Container
+- Position
 - Buttons
 - Text
 - Grids
@@ -45,6 +46,11 @@
 .full-width {
     width: 100%;
 }
+
+/* --+ POSITION +-- */
+.pos-left { float: left; }
+.pos-center { margin: 0 auto; width: fit-content; }
+.pos-right { float: right; }
 
 /* --+ BUTTONS +-- */
 .btn {
