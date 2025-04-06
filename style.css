@@ -1,0 +1,20 @@
+header {
+    margin-top: 20vh;
+    min-height: 40vh;
+}
+
+hr {
+    margin: 32px 0;
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+}
+
+.exemple {
+    margin: 16px 0;
+}
+
+footer {
+    background-color: #222;
+    padding: 16px;
+}

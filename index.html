@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpliestui test</title>
+    <link rel="stylesheet" href="simpliestui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="pos-center text-size-display-large text-weight-semibold">simpliestui</h1>
+            <h2 class="pos-center text-size-display-small">A classic, easy to handle CSS framework / design system</h2>
+            <div class="pos-center">
+                <a href="https://github.com/code-nuage/simpliestui/blob/main/simpliestui.css" class="btn primary text-size-medium">Download</a>
+                <a href="https://github.com/code-nuage/simpliestui/blob/main/simpliestui-min.css" class="btn primary text-size-medium">Download (minified)</a>
+            </div>
+        </header>
+        <hr>
+        <main>
+            <!-- INTRODUCTION -->
+            <section id="section-introduction">
+                <h2 class="text-size-display-medium text-weight-semibold">Introduction</h2>
+                <p class="text-size-regular">simpliestui is a lightweight, class-based CSS framework designed for simplicity, clarity, and fast development. Inspired by timeless design principles, it provides a clean foundation of styles and utility classes to help developers build responsive, elegant user interfaces—without the complexity of bloated frameworks. Whether you're prototyping or shipping production-ready pages, simpliestui keeps things intuitive and manageable, so you can focus on building, not configuring. No learning curve, just classic styling made easy. Better yet, you can customize the colors just by overriding the default values.</p>
+            </section>
+            <hr>
+            <!--+ GETTING STARTED +-->
+            <section id="section-gettingstarted">
+                <h2 class="text-size-display-medium text-weight-semibold">Getting Started</h2>
+                <p class="text-size-regular">Getting started with simpliestui is fast and effortless. Just drop in the stylesheet and you're ready to build with a clean, minimal design system.</p>
+                <pre><code>&lt;link rel="stylesheet" href="path/to/simpliestui.css"&gt;</code></pre>
+            </section>
+            <hr>
+            <!--+ CONTAINER +-->
+            <section id="section-container">
+                <h2 class="text-size-display-medium text-weight-semibold">Container</h2>
+                <p class="text-size-regular">Containers, as in many other frameworks, are centered <code>&lt;div&gt;</code> elements with <code>container</code> class that act as the main wrapper for your content. The container has a maximum width of 960px and becomes fluid on smaller screens.</p>
+<pre><code>&lt;div class="container"&gt;
+    &lt;!-- CONTENT --&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+            <hr>
+            <!-- POSITION -->
+            <section id="section-position">
+                <h2 class="text-size-display-medium text-weight-semibold">Position</h2>
+                <p class="text-size-regular">You can set the alignment of your content using the <code>[position|pos]-[left|center|right]</code> utility classes.</p>
+<pre><code>&lt;p class="pos-left"&gt;Left&lt;/p&gt;
+&lt;p class="pos-center"&gt;Center&lt;/p&gt;
+&lt;p class="pos-right"&gt;Right&lt;/p&gt;
+</code></pre>
+            <div class="exemple">
+                <p class="pos-left">Left</p>
+                <p class="pos-center">Center</p>
+                <p class="pos-right">Right</p>
+            </div>
+            </section>
+            <hr>
+            <!-- BUTTONS -->
+            <section id="section-buttons">
+                <h2 class="text-size-display-medium text-weight-semibold">Buttons</h2>
+                <p class="text-size-regular">Buttons are styled with the .btn class and can be extended with variants like <code>primary</code>, <code>secondary</code>, <code>positive</code>, or <code>negative</code> classes to reflect the action's intent.</p>
+<pre><code>&lt;a class="btn primary"&gt;Download&lt;/a&gt;
+&lt;a class="btn secondary"&gt;Back&lt;/a&gt;
+&lt;a class="btn positive"&gt;Confirm&lt;/a&gt;
+&lt;a class="btn negative"&gt;Cancel&lt;/a&gt;</code></pre>
+
+                <div class="exemple">
+                    <a class="btn primary">Download</a>
+                    <a class="btn secondary">Back</a>
+                    <a class="btn positive">Confirm</a>
+                    <a class="btn negative">Cancel</a>
+                </div>
+                <p class="text-size-regular">Button tabs are groups of buttons that acts as a action choice for a single concept. Add <code>left</code>, <code>center</code> or <code>right</code> to create your tab.</p>
+<pre><code>&lt;a class="btn secondary left"&gt;Back&lt;/a&gt;
+&lt;a class="btn negative center"&gt;Delete&lt;/a&gt;
+&lt;a class="btn positive right"&gt;Add&lt;/a&gt;</code></pre>
+                <div class="exemple">
+                    <a class="btn secondary left">Back</a><a class="btn negative center">Delete</a><a class="btn positive right">Add</a>
+                </div>
+            </section>
+            <hr>
+            <!-- TEXT -->
+            <section id="section-text">
+                <h2 class="text-size-display-medium text-weight-semibold">Text</h2>
+                <p class="text-size-regular">You can customize text appearance using utility classes for size, weight, and font. Sizes range from <code>text-size-caption</code> (12px) to <code>text-size-hero-large</code> (128px). Weights range from <code>text-weight-thin</code> (100) to <code>text-weight-black</code> (900). Font families include <code>text-outfit</code> and <code>text-mono</code>.</p>
+<pre><code>&lt;p class="text-size-display-small text-weight-light"&gt;Light display small text&lt;/p&gt;
+&lt;p class="text-size-14 text-weight-700 text-mono"&gt;Bold small monospace&lt;/p&gt;</code></pre>
+                <div class="exemple">
+                    <p class="text-size-display-small text-weight-light">Light display small text</p>
+                    <p class="text-size-14 text-weight-700 text-mono">Bold small monospace</p>
+                </div>
+            </section>
+            <hr>
+            <!-- GRIDS -->
+            <section id="section-grids">
+                <h2 class="text-size-display-medium text-weight-semibold">Grids</h2>
+                <p class="text-size-regular">Create flexible layouts using a 12-column grid. Wrap columns in a <code>grid-row</code> and use <code>grid-col-[n]</code> classes (1 to 12) for widths. On mobile, columns stack vertically by default.</p>
+<pre><code>&lt;div class="grid-row"&gt;
+    &lt;div class="grid-col-4"&gt;col 4&lt;/div&gt;
+    &lt;div class="grid-col-8"&gt;col 8&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <div class="exemple">
+                    <div class="grid-row">
+                        <div class="grid-col-1" style="background:#ddd; padding:8px">col 1</div>
+                        <div class="grid-col-11" style="background:#bbb; padding:8px">col 11</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-2" style="background:#ddd; padding:8px">col 2</div>
+                        <div class="grid-col-10" style="background:#bbb; padding:8px">col 10</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-3" style="background:#ddd; padding:8px">col 3</div>
+                        <div class="grid-col-9" style="background:#bbb; padding:8px">col 9</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-4" style="background:#ddd; padding:8px">col 4</div>
+                        <div class="grid-col-8" style="background:#bbb; padding:8px">col 8</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-5" style="background:#ddd; padding:8px">col 5</div>
+                        <div class="grid-col-7" style="background:#bbb; padding:8px">col 7</div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-6" style="background:#ddd; padding:8px">col 6</div>
+                        <div class="grid-col-6" style="background:#bbb; padding:8px">col 6</div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <!-- CUSTOMIZATION -->
+            <section id="section-customization">
+                <h2 class="text-size-display-medium text-weight-semibold">Customization</h2>
+                <p class="text-size-regular">Customizing colors is easy — just modify the css variables defined at the top of the file. For example, change <code>--color-primary</code> to adapt the main accent color across all components.</p>
+<pre><code>:root {
+    --color-primary: #ff6600;
+}</code></pre>
+            </section>
+            <hr>
+            <!-- CLOSING -->
+            <section id="section-end">
+                <h2 class="text-size-display-medium text-weight-semibold">That’s it!</h2>
+                <p class="text-size-regular">simpliestui is built to be minimal, readable, and fast to use. Extend it, fork it, and style it your way. Happy building.</p>
+            </section>
+            <hr>
+        </main>
+    </div>
+    <footer>
+        <div class="grid-row">
+            <div class="grid-col-4">
+                <p class="pos-left text-size-medium text-color-white">code-nuage</p>
+                <a href="https://www.github.com/code-nuage" class="btn primary">GitHub</a>
+                <a href="https://www.linkedin.com/in/eloi-hariot-4769aa309/" class="btn primary">LinkedIN</a>
+            </div>
+            <div class="grid-col-4"></div>
+        </div>
+    </footer>
+</body>
+</html>
