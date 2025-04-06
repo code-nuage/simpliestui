@@ -45,14 +45,20 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 976px) {
+    .container {
+        margin: 0 8px;
+    }
+}
+
 .full-width {
     width: 100%;
 }
 
 /* --+ POSITION +-- */
-.pos-left, .position-left { float: left; text-align: left; }
-.pos-center, .position-center { margin: 0 auto; width: fit-content; text-align: center; }
-.pos-right, .position-right { float: right; text-align: right; }
+.pos-left, .position-left { margin-right: auto; text-align: left; }
+.pos-center, .position-center { margin: 0 auto; text-align: center; }
+.pos-right, .position-right { margin-left: auto; text-align: right; }
 
 /* --+ BUTTONS +-- */
 .btn {
@@ -61,15 +67,16 @@
     border-style: inset;
     border: none;
     color: var(--color-white);
+    text-align: center;
 
     background-color: var(--color-primary); /* Stylise the "default" button with primary button style */
 
     cursor: pointer;
 }
 
-.btn.left { border-radius: 4px 0 0 4px; border-right: .5px solid #00000044; }
-.btn.center { border-radius: 0; border-inline: .5px solid #00000044; }
-.btn.right { border-radius: 0 4px 4px 0; border-left: .5px solid #00000044; }
+.btn.left { border-radius: 4px 0 0 4px; border-right: .5px solid #00000022; }
+.btn.center { border-radius: 0; border-inline: .5px solid #00000022; }
+.btn.right { border-radius: 0 4px 4px 0; border-left: .5px solid #00000022; }
 
 .btn:hover { background-color: var(--color-primary-selected); text-decoration: none; }
 
@@ -97,15 +104,15 @@ pre {
     background-color: #e1e1e1;
     border-radius: 4px;
     padding: 16px;
+    overflow-x: auto;
 }
 
 pre > code {
-    overflow: auto;
     border: none;
 }
 
 /* --+ TEXT +-- */
-a, p, button, h6, h5, h4, h3, h2, h1 {
+a, button, p, h6, h5, h4, h3, h2, h1 {
     color: var(--color-black);
     text-align: justify;
 
@@ -116,12 +123,19 @@ a, p, button, h6, h5, h4, h3, h2, h1 {
     padding: 4px 0px;
 }
 
+p, h6, h5, h4, h3, h2, h1 {
+    width: 100%;
+}
+
 a:hover {
     text-decoration: underline;
 }
 
 .text-outfit { font-family: "Outfit", sans-serif; }
 .text-mono { font-family: "Space Mono", monospace; }
+
+.text-color-white { color: var(--color-white); }
+.text-color-black { color: var(--color-black); }
 
 .text-size-12, .text-size-caption { font-size: 12px; }
 .text-size-14, .text-size-small { font-size: 14px; }
@@ -169,7 +183,7 @@ a:hover {
 .grid-col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
 .grid-col-12 { flex: 0 0 100%; max-width: 100%; }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     [class^="grid-col-"] {
         flex: 0 0 100%;
         max-width: 100%;
