@@ -131,11 +131,18 @@ a:hover {
     text-decoration: underline;
 }
 
-.text-outfit { font-family: "Outfit", sans-serif; }
-.text-mono { font-family: "Space Mono", monospace; }
+.text-font-outfit { font-family: "Outfit", sans-serif; }
+.text-font-mono { font-family: "Space Mono", monospace; }
+.text-font-italic { font-style: italic; }
 
 .text-color-white { color: var(--color-white); }
 .text-color-black { color: var(--color-black); }
+
+.text-decoration-underline, .text-deco-underline { text-decoration: underline; }
+.text-decoration-wavy, .text-deco-wavy { text-decoration: underline wavy; }
+.text-decoration-dashed, .text-deco-dashed { text-decoration: underline dashed; }
+.text-decoration-crossed, .text-deco-crossed { text-decoration: line-through; }
+.text-decoration-reset, .text-deco-reset { text-decoration: none; }
 
 .text-size-12, .text-size-caption { font-size: 12px; }
 .text-size-14, .text-size-small { font-size: 14px; }
