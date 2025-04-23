@@ -92,16 +92,16 @@
 
 /* --+ CODE +-- */
 code {
-    border: 1px solid #000000;
-    background-color: #e1e1e1;
+    border: 1px solid #c2c2c2;
+    background-color: #f7f7f7;
     border-radius: 4px;
     padding: 0 2px;
     font-family: "Space Mono", monospace;
 }
 
 pre {
-    border: 1px solid #000000;
-    background-color: #e1e1e1;
+    border: 1px solid #c2c2c2;
+    background-color: #f7f7f7;
     border-radius: 4px;
     padding: 16px;
     overflow-x: auto;
