@@ -1,11 +1,12 @@
 /* ===== SIMPLIESTUI ===== */
 
-/* ===== TABLE OF CONTENT ===== 
+/* ===== TABLE OF CONTENT =====
 
 - Container
 - Position
 - Buttons
 - Code
+- Horizontal Rule
 - Text
 - Grids
 
@@ -20,14 +21,16 @@
     --color-black: #000000;
 
     /* NORMAL COLORS */
-    --color-primary: #33A5FF;
+    --color-primary: #33a5ff;
     --color-secondary: #a8a8a8;
+    --color-tertiary: #d0d0d0;
     --color-positive: #3dbe38;
-    --color-negative: #E23F3F;
+    --color-negative: #e23f3f;
 
     /* SELECTED COLORS */
     --color-primary-selected: #2d92df;
     --color-secondary-selected: #919191;
+    --color-tertiary-selected: #c0c0c0;
     --color-positive-selected: #35a731;
     --color-negative-selected: #cc3333;
 }
@@ -82,26 +85,28 @@
 
 .btn.primary { background-color: var(--color-primary); }
 .btn.secondary { background-color: var(--color-secondary); }
+.btn.tertiary { background-color: var(--color-tertiary); }
 .btn.positive { background-color: var(--color-positive); }
 .btn.negative { background-color: var(--color-negative); }
 
 .btn.primary:hover { background-color: var(--color-primary-selected); }
 .btn.secondary:hover { background-color: var(--color-secondary-selected); }
+.btn.tertiary:hover { background-color: var(--color-tertiary-selected); }
 .btn.positive:hover { background-color: var(--color-positive-selected); }
 .btn.negative:hover { background-color: var(--color-negative-selected); }
 
 /* --+ CODE +-- */
 code {
-    border: 1px solid #dedede;
-    background-color: #f1f1f1;
+    border: 1px solid #c2c2c2;
+    background-color: #f7f7f7;
     border-radius: 4px;
     padding: 0 2px;
     font-family: "Space Mono", monospace;
 }
 
 pre {
-    border: 1px solid #dedede;
-    background-color: #f1f1f1;
+    border: 1px solid #c2c2c2;
+    background-color: #f7f7f7;
     border-radius: 4px;
     padding: 16px;
     overflow-x: auto;
@@ -166,33 +171,65 @@ a:hover {
 .text-weight-800, .text-weight-extrabold { font-weight: 800; }
 .text-weight-900, .text-weight-black { font-weight: 900; }
 
+/* --+ HORIZONTAL RULE +-- */
+hr {
+    height: 2px;
+    border: none;
+    width: calc(100% - 32px);
+    margin: 16px auto;
+    background-color: var(--color-secondary);
+}
+
 /* --+ GRIDS +-- */
 .grid-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     width: 100%;
 }
 
-[class^="grid-col-"] {
-    flex: 1;
-}
+.grid-spacing-2  { gap: 2px; }
+.grid-spacing-4  { gap: 4px; }
+.grid-spacing-8  { gap: 8px; }
+.grid-spacing-12 { gap: 12px; }
+.grid-spacing-16 { gap: 16px; }
+.grid-spacing-24 { gap: 24px; }
+.grid-spacing-32 { gap: 32px; }
 
-.grid-col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
-.grid-col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
-.grid-col-3 { flex: 0 0 25%; max-width: 25%; }
-.grid-col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
-.grid-col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
-.grid-col-6 { flex: 0 0 50%; max-width: 50%; }
-.grid-col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
-.grid-col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
-.grid-col-9 { flex: 0 0 75%; max-width: 75%; }
-.grid-col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
-.grid-col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
-.grid-col-12 { flex: 0 0 100%; max-width: 100%; }
+.grid-col-1  { grid-column: span 1; }
+.grid-col-2  { grid-column: span 2; }
+.grid-col-3  { grid-column: span 3; }
+.grid-col-4  { grid-column: span 4; }
+.grid-col-5  { grid-column: span 5; }
+.grid-col-6  { grid-column: span 6; }
+.grid-col-7  { grid-column: span 7; }
+.grid-col-8  { grid-column: span 8; }
+.grid-col-9  { grid-column: span 9; }
+.grid-col-10 { grid-column: span 10; }
+.grid-col-11 { grid-column: span 11; }
+.grid-col-12 { grid-column: span 12; }
 
 @media screen and (max-width: 768px) {
-    [class^="grid-col-"] {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .grid-row {
+        display: block;
+        width: 100%;
     }
+    [class*="grid-col-"] {
+        width: 100%;
+    }
+
+    .grid-spacing-2  { margin: -1px -2px; }
+    .grid-spacing-4  { margin: -2px -4px; }
+    .grid-spacing-8  { margin: -4px -8px; }
+    .grid-spacing-12 { margin: -6px -12px; }
+    .grid-spacing-16 { margin: -8px -16px; }
+    .grid-spacing-24 { margin: -12px -24px; }
+    .grid-spacing-32 { margin: -16px -32px; }
+
+    .grid-spacing-2  [class*="grid-col-"]  { margin: 1px 2px; }
+    .grid-spacing-4  [class*="grid-col-"]  { margin: 2px 4px; }
+    .grid-spacing-8  [class*="grid-col-"]  { margin: 4px 8px; }
+    .grid-spacing-12 [class*="grid-col-"]  { margin: 6px 12px; }
+    .grid-spacing-16 [class*="grid-col-"]  { margin: 8px 16px; }
+    .grid-spacing-24 [class*="grid-col-"]  { margin: 12px 24px; }
+    .grid-spacing-32 [class*="grid-col-"]  { margin: 16px 32px; }
 }

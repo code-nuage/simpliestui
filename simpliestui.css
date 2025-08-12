@@ -23,14 +23,14 @@
     /* NORMAL COLORS */
     --color-primary: #33a5ff;
     --color-secondary: #a8a8a8;
-    --color-tertiary: #f0f0f0;
+    --color-tertiary: #d0d0d0;
     --color-positive: #3dbe38;
     --color-negative: #e23f3f;
 
     /* SELECTED COLORS */
     --color-primary-selected: #2d92df;
     --color-secondary-selected: #919191;
-    --color-tertiary-selected: #d0d0d0;
+    --color-tertiary-selected: #c0c0c0;
     --color-positive-selected: #35a731;
     --color-negative-selected: #cc3333;
 }
@@ -173,7 +173,7 @@ a:hover {
 
 /* --+ HORIZONTAL RULE +-- */
 hr {
-    height: 1.5px;
+    height: 2px;
     border: none;
     width: calc(100% - 32px);
     margin: 16px auto;

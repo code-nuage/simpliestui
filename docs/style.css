@@ -3,13 +3,6 @@ header {
     min-height: 40vh;
 }
 
-hr {
-    margin: 32px 0;
-    border: 0;
-    height: 1px;
-    background-color: #000000;
-}
-
 .exemple {
     margin: 16px 0;
 }
