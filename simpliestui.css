@@ -12,6 +12,8 @@
 
 */
 
+/* --+ FONTS +-- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -21,25 +23,25 @@
     --color-black: #000000;
 
     /* NORMAL COLORS */
-    --color-primary: #33a5ff;
-    --color-secondary: #a8a8a8;
-    --color-tertiary: #d0d0d0;
-    --color-positive: #3dbe38;
-    --color-negative: #e23f3f;
+    --color-primary: hsl(200, 70%, 50%);
+    --color-secondary: hsl(0, 0%, 75%);
+    --color-tertiary: hsl(0, 0%, 85%);
+    --color-positive: hsl(120, 70%, 50%);
+    --color-negative: hsl(0, 70%, 50%);
 
     /* SELECTED COLORS */
-    --color-primary-selected: #2d92df;
-    --color-secondary-selected: #919191;
-    --color-tertiary-selected: #c0c0c0;
-    --color-positive-selected: #35a731;
-    --color-negative-selected: #cc3333;
+    --color-primary-selected: hsl(200, 70%, 40%);
+    --color-secondary-selected: hsl(0, 0%, 65%);
+    --color-tertiary-selected: hsl(0, 0%, 75%);
+    --color-positive-selected: hsl(120, 70%, 40%);
+    --color-negative-selected: hsl(0, 70%, 40%);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 /* --+ CONTAINER +-- */
@@ -77,9 +79,9 @@
     cursor: pointer;
 }
 
-.btn.left { border-radius: 4px 0 0 4px; border-right: .5px solid #00000022; }
-.btn.center { border-radius: 0; border-inline: .5px solid #00000022; }
-.btn.right { border-radius: 0 4px 4px 0; border-left: .5px solid #00000022; }
+.btn.left { border-radius: 4px 0 0 4px; border-right: .5px solid hsla(0, 0%, 0%, .1); }
+.btn.center { border-radius: 0; border-inline: .5px solid hsla(0, 0%, 0%, .1); }
+.btn.right { border-radius: 0 4px 4px 0; border-left: .5px solid hsla(0, 0%, 0%, .1); }
 
 .btn:hover { background-color: var(--color-primary-selected); text-decoration: none; }
 
