@@ -1,13 +1,13 @@
-header {
-    margin-top: 20vh;
-    min-height: 40vh;
+#home {
+    padding: var(--sp-huge) 0;
 }
 
-.exemple {
-    margin: 8px 0;
+section {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
-    background-color: #222;
-    padding: 16px;
+    background-color: var(--cn-dark);
+    padding: var(--sp-regular) 0;
 }
