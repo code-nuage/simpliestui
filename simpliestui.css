@@ -31,12 +31,12 @@
     --cb-text:             light-dark(hsl(0 0 5), hsl(0 0 95));
     
     /* Accent */
-    --ca-primary:   light-dark(hsl(195 80 40), hsl(195 80 25));
+    --ca-primary:   light-dark(hsl(195 80 45), hsl(195 80 35));
     --ca-secondary: light-dark(hsl(0 0 55), hsl(0 0 30));
     --ca-tertiary:  light-dark(hsl(0 0 75), hsl(0 0 20));
-    --ca-positive:  light-dark(hsl(120 80 40), hsl(120 80 25));
-    --ca-warning:   light-dark(hsl(45 80 45), hsl(45 80 30));
-    --ca-negative:  light-dark(hsl(0 80 40), hsl(0 80 25));
+    --ca-positive:  light-dark(hsl(120 80 45), hsl(120 80 30));
+    --ca-warning:   light-dark(hsl(45 80 50), hsl(45 80 35));
+    --ca-negative:  light-dark(hsl(0 80 45), hsl(0 80 30));
 
     /* Theme non-sensitive colors */
     --cn-dark:  hsl(0 0 5%);
