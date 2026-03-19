@@ -9,6 +9,7 @@
 - Texts
 - Buttons
 - Forms
+- Tables
 - Cards
 - Grids
 - Modals
@@ -112,7 +113,7 @@ body {
     }
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, input, select, label {
+span, h1, h2, h3, h4, h5, h6, p, a, input, select, label, th, td {
     font-size: var(--ts-body);
     font-weight: var(--tw-regular);
     font-family: var(--tf-body, sans-serif);
@@ -229,6 +230,24 @@ label.check-form input[type="checkbox"] {
 
 label.check-form input[type="checkbox"]:checked {
     background: var(--ca-primary);
+}
+
+/* --+ Tables +-- */
+table {
+    border-collapse: collapse;
+}
+
+thead, tbody, tfoot {
+    border-bottom: 1px solid var(--cb-border);
+}
+
+th {
+    font-weight: var(--tw-bold);
+}
+
+th, td {
+    padding: var(--sp-small) var(--sp-regular);
+    text-align: left;
 }
 
 /* --+ Card +-- */
