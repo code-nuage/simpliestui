@@ -30,7 +30,7 @@
     --cb-surface:          light-dark(hsl(0 0 95%), hsl(0 0 15%));
     --cb-surface-elevated: light-dark(hsl(0 0 90%), hsl(0 0 20%));
     --cb-text:             light-dark(hsl(0 0 5), hsl(0 0 95));
-    
+
     /* Accent */
     --ca-primary:   light-dark(hsl(195 80 45), hsl(195 80 35));
     --ca-secondary: light-dark(hsl(0 0 55), hsl(0 0 30));
@@ -113,7 +113,7 @@ body {
     }
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, input, select, label, th, td {
+span, h1, h2, h3, h4, h5, h6, p, a, input, select, label, th, td, button {
     font-size: var(--ts-body);
     font-weight: var(--tw-regular);
     font-family: var(--tf-body, sans-serif);
@@ -367,3 +367,20 @@ hr {
 hr.separator {
     background-color: var(--cb-border);
 }
+
+/* Position */
+.flex { display: flex; }
+.flex-column, .fd-c { flex-direction: column; }
+.flex-row, .fd-r { flex-direction: row; }
+
+.align-start, .ai-s { align-items: start; }
+.align-center, .ai-c { align-items: center; }
+.align-end, .ai-e { align-items: end; }
+
+.justify-start, .jc-s { justify-content: start; }
+.justify-center, .jc-c { justify-content: center; }
+.justify-end, .jc-e { justify-content: end; }
+
+.justify-around, .jc-sa { justify-content: space-around; }
+.justify-between, .jc-sb { justify-content: space-between; }
+.justify-evenly, .jc-se { justify-content: space-evenly; }
